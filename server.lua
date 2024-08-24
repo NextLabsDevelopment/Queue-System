@@ -47,7 +47,6 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
         
         if #queue > 0 and GetNumPlayerIndices() < maxPlayers then
-            -- Sort the queue by priority.
             table.sort(queue, function(a, b) return a.priority > b.priority end)
             local nextPlayer = table.remove(queue, 1)
             
